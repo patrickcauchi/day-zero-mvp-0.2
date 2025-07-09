@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Day Zero MVP</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="https://emojiapi.dev/api/v1/dizzy/64.png" />
+</head>
+<body>
+  <div id="app">
+    <h1>Day Zero – Daily Log</h1>
+
+    <section id="morning-log">
+      <h2>Morning Log</h2>
+      <label>Focus Today: <input type="text" id="focus" /></label><br/>
+      <label>Goal Today: <input type="text" id="goal" /></label><br/>
+      <label>Morning Mood: <input type="text" id="moodMorning" /></label><br/>
+      <button onclick="saveMorningLog()">Save Morning Log</button>
+    </section>
+
+    <section id="morning-log-preview">
+        <h3>📘 Morning Log Preview</h3>
+        <div id="morning-output"></div>
+        <button onclick="clearMorningLog()">Clear Morning Log</button>
+    </section>
+
+
+    <hr/>
+
+    <section id="evening-log">
+      <h2>Evening Log</h2>
+      <label>What did you accomplish? <input type="text" id="accomplishment" /></label><br/>
+      <label>What could you improve? <input type="text" id="improve" /></label><br/>
+      <label>Evening Mood: <input type="text" id="moodEvening" /></label><br/>
+      <button onclick="saveEveningLog()">Save Evening Log</button>
+    </section>
+
+    <section id="evening-log-preview">
+        <h3>📘 Evening Log Preview</h3>
+        <div id="evening-output"></div>
+        <button onclick="clearEveningLog()">Clear Evening Log</button>
+    </section>
+
+    <hr/>
+
+    <section id="goals-section">
+        <h2>🎯 Your Goals</h2>
+
+        <label>Long-Term Goal: <input type="text" id="longGoal" placeholder="E.g. Start a business" /></label><br/>
+
+        <label>Short-Term Goal: <input type="text" id="shortGoal" placeholder="E.g. Launch MVP by Sept" /></label><br/>
+
+        <label>Today's Focus Goal: <input type="text" id="dailyGoal" placeholder="E.g. Finish landing page" /></label><br/>
+
+        <button onclick="saveGoals()">Save Goals</button>
+
+        <div id="goal-output" style="margin-top: 1rem;"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+
+
+  <hr/>
+
+
+</body>
+</html>
